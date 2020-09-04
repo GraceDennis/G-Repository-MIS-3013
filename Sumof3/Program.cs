@@ -1,40 +1,35 @@
 ﻿using System;
 
-namespace Sumof3
+namespace Participation1_SumOf3Numbers
 {
     class Program
-    {
-        int firstnum = 0;
-        int secondnum = 0;
-        int thirdnum = 0;
-        string firstresponse = "";
-        string secondresponse = "";
-        string thirdresponse = "";
-
-        Console.WriteLine("Please enter three different numbers 1 is a valid input and so is 5.5 >>");
-        firstresponse = Console.ReadLine(); 
-            firstnum = Convert.ToDouble(firstresponse);   
-            secondresponse = Console.ReadLine(); 
-            secondnum = Convert.ToDouble(secondresponse); 
-        thirdresponse = Console.ReadLine();
-            thirdnum = Convert.ToDouble(thirdresponse);
-            
-    /* TO PRINT THE SUM with 3 decimal places */
-        int sum = firstnum + secondnum + thirdnum;
-        Console.WriteLine("sum");
-
-    /* MULTIPLY <<< THE SUM BY A CONST VALUE OF 7.777 */
-    /* HINT MAKE CONST VARIABLE DOUBLE */ 
-    const double value = 7.777
-public Program(string firstesponse)
+   {
+        static void Main(string[] args)
         {
-            this.firstesponse = firstesponse;
+
+            Console.WriteLine("Number of vacation days you want?");
+            double days = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(value: "Enter your age in number format");
+            double age = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Give the number of jobs you have had ");
+            double jobNumber = Convert.ToDouble(Console.ReadLine());
+
+        /* ADD & PRINT THE SUM with 3<<<<<< decimal places */
+            Console.WriteLine("The sum of your three different numbers");
+            double sum = days + age + jobNumber;
+            Console.WriteLine(sum.ToString("F3")); 
+
+        /* MULTIPLY <<< THE SUM BY A CONST VALUE OF 7.777 */
+        /* HINT MAKE CONST VARIABLE DOUBLE */
+            const double seven = 7.777;
+            double product = sum * seven;
+
+            Console.WriteLine("The sum multiplied by 7.777 equals " + product);
         }
 
-        Console.WriteLine("Multiply by 7.777"); 
 
-       
-
-
-    
+   
     }
+}
