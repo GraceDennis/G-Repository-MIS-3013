@@ -4,18 +4,17 @@ namespace Sumof3
 {
     class Program
     {
-        readonly int firstnum = 0;
+        int firstnum = 0;
         int secondnum = 0;
         int thirdnum = 0;
         string firstresponse = "";
         string secondresponse = "";
         string thirdresponse = "";
 
-        /* THIS PART IS FOR USER TO ENTER 3 DIFFERENT NUMBERS */
-        Console.WriteLine( " Please enter three different numbers 1 is a valid input and so is 5.5 >>" );
+        Console.WriteLine("Please enter three different numbers 1 is a valid input and so is 5.5 >>");
         firstresponse = Console.ReadLine(); 
-            firstnum = Convert.ToDouble(firstresponse);
-        secondresponse = Console.ReadLine(); 
+            firstnum = Convert.ToDouble(firstresponse);   
+            secondresponse = Console.ReadLine(); 
             secondnum = Convert.ToDouble(secondresponse); 
         thirdresponse = Console.ReadLine();
             thirdnum = Convert.ToDouble(thirdresponse);
