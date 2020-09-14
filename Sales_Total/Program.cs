@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http.Headers;
 
-namespace Parker_Hallows
+namespace Sales_Total
 {
     class Program
     {
