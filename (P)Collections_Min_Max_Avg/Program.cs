@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _P_Collections_Min_Max_Avg
 {
@@ -23,42 +24,49 @@ namespace _P_Collections_Min_Max_Avg
 
                 examgrades.Add(examgrade);
 
-                Console.WriteLine("Please enter your second exam grade. >>");
+                Console.WriteLine("Thank you. Now, enter your second exam grade. >>");
                 answer = Console.ReadLine();
-                
-            } 
+
+            }
             while (answer.ToLower() == "yes");
 
-           
-            double max;
-            double average;
-            double min;
-
-            foreach (var examgrade in examgrades)
+            double max = examgrades[0];
+            double totalgrades = 0;
+            double min = examgrades[0];
+            double average = 0;
+            
+            for (int i = 0; i < examgrades.Count; i++)
             {
-                if (examgrade < examgrades[0])
-                    if (examgrade <= min)
-                    {
-                        min = examgrade;
+                double examgrade = examgrades[i];
 
-                        Console.WriteLine($"Your minimum grade is {min}.");
-                    }
-                do
+                if (examgrade < max) 
                 {
-                    if (examgrade > examgrades[0])
-                    {
-                        max = examgrade;
-                        Console.WriteLine($"Your maximum grade is {max}.");
-                    }
-                    else if (examgrade == examgrades[0])
-                    {
-                        average = examgrade;
-                        Console.WriteLine($"Your average grade is {average}.");
-                    }
-
-                } while (true);
+                    max = examgrade;
+                }
+                if (examgrade > min)
+                {
+                    min = examgrade;
+                }
+                //gradeSum = gradeSum + examGrades[i];   
+                totalgrades += examgrades[i];
             }
+            average = examgrades.Sum() / examgrades.Count();
+
+
+
+            Console.WriteLine($"{max} is the lowest exam grade. >>");
+            Console.WriteLine($"{min} is the highest exam grade. >>");
+            Console.WriteLine($"{average} is the average exam grade. >>");
             Console.ReadKey();
         }
+
     }
 }
+//can't figure out foreach way
+//foreach (var examgrade in examgrades)
+//    if (examgrade < examgrades[0])
+//{
+//    min = examgrade;
+
+//    Console.WriteLine($"Your minimum grade is {min}.");
+//  }
