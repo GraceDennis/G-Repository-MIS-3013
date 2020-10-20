@@ -38,6 +38,11 @@ namespace _P_Simple_Method
 
                     Console.WriteLine("hee haw bahhhh");
                 }
+                else if (response == "snake")
+                {
+                    Console.WriteLine("hissss hisss");
+                }
+
                 else 
                 {
                     Console.WriteLine("Bark woof");
