@@ -12,14 +12,14 @@ namespace _P_Simple_Method
         {
             string Animal = AnimalType();
             string response = Speak(Animal);
-            Console.WriteLine(response); 
+          
 
              Console.ReadKey();
         }
 
         static string AnimalType()
         {
-            Console.WriteLine(" << Enter an animal type >>");
+            Console.WriteLine(" << Please, enter a type of animal. >>");
             string AnimalType = Console.ReadLine();
 
             return AnimalType;
@@ -43,9 +43,13 @@ namespace _P_Simple_Method
                     Console.WriteLine("hissss hisss");
                 }
 
-                else 
+                else if (response == "dog")
                 {
                     Console.WriteLine("Bark woof");
+                }
+                else
+                {
+                Console.WriteLine("Please, try a different animal!");
                 }
 
             return response;

@@ -75,6 +75,9 @@ namespace ProcessingCSVfile
             double SumForOctober2005 = 0;
             double SumForNovember2005 = 0;
             double SumForDecember2005 = 0;
+            // string filePath = @"__sales_data_sample.csv";
+
+            // string[] lines = File.ReadAllLines(filePath);
 
             for (int i = 1; i < lines.Length; i++)
             {
