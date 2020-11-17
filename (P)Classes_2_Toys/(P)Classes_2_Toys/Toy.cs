@@ -27,7 +27,9 @@ namespace _P_Classes_2_Toys
             Random rand = new Random();
             // .Next returns a non-negatice 
             int find = rand.Next(1, 25);
-            return Manufacturer + find; 
+            char manuletter = Manufacturer[0];
+            string getaisle = $"{manuletter}" + $"{find}";
+            return getaisle;
 
         }
     }
